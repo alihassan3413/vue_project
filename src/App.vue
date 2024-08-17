@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { Button } from "@/components/ui/button";
+import { RouterView } from "vue-router";
+import GlobalLoader from "vue-global-loader/GlobalLoader.vue";
+import CircleSpinner from "vue-global-loader/CircleSpinner.vue";
 </script>
 
 <template>
-  <div>
-    HomePage
-    <Button variant="secondary">Click me</Button>
-  </div>
+  <GlobalLoader>
+    <CircleSpinner />
+  </GlobalLoader>
+  <RouterView />
 </template>
